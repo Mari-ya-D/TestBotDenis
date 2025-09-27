@@ -261,9 +261,10 @@
 
 const { Telegraf, Markup, session } = require('telegraf');
 const sqlite3 = require('sqlite3').verbose();
+require('dotenv').config();
 
 
-const bot = new Telegraf('8401346568:AAHIMEF-5rOWnI9QaZ2Yula8V8b36pnbmZQ');
+const bot = new Telegraf(process.env.BOT_TOKEN);
 const db = new sqlite3.Database('bot.db');
 bot.use(session()); // Добавьте эту строку для включения сессий
 

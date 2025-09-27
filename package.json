@@ -4,7 +4,8 @@
   "description": "",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
+    "postinstall": "npm rebuild sqlite3 -- build-from-source"
   },
   "keywords": [],
   "author": "",
